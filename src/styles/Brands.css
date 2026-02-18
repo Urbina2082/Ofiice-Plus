@@ -11,7 +11,7 @@
 
 .badge {
   display: inline-block;
-  background-color: #E8F0FF;
+   background: linear-gradient(135deg, #0052cc50 0%, #4a3f7d4f 45%, #e31c2362 100%);
   color: var(--primary-blue);
   padding: 6px 12px;
   border-radius: 20px;
@@ -57,11 +57,12 @@
 
 .brand-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.357);
 }
 
 .brand-card img {
-  height: 55px;
+  width: 105px;
+  height: 75px;
   object-fit: contain;
   margin-bottom: 10px;
 }

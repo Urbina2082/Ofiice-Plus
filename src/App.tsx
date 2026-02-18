@@ -7,6 +7,7 @@ import Escritura from './pages/Escritura'
 import Papel from './pages/Papel'
 import Oficina from './pages/Oficina'
 import Tecnologia from './pages/Tecnologia'
+import Details from './pages/DetailsProducts'
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/papel" element={<Papel />} />
           <Route path="/oficina" element={<Oficina />} />
           <Route path="/tecnologia" element={<Tecnologia />} />
+          <Route path="/details/:productId" element={<Details />} />
         </Routes>
       </main>
       <Footer />

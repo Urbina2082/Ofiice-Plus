@@ -1,91 +1,142 @@
-import '../styles/About.css'
-import { Mail, Phone, MapPin, Clock } from 'lucide-react'
-import { useState } from 'react'
-import '../styles/Contact.css'
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
-import '../styles/Social.css'
-import { ChevronDown } from 'lucide-react'
-import '../styles/FAQ.css'
+import "../styles/About.css";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
+import "../styles/Contact.css";
+import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import "../styles/Social.css";
+import { ChevronDown } from "lucide-react";
+import "../styles/FAQ.css";
+import { Link } from "react-router-dom";
+import "../styles/tarjet_banc.css";
 
 function MoreInfo() {
   // About Section
   const stats = [
     {
-      icon: '10+',
-      title: 'Años de Experiencia',
-      description: 'Más de una década sirviendo a miles de clientes satisfechos'
+      icon: "10+",
+      title: "Años de Experiencia",
+      description:
+        "Más de una década sirviendo a miles de clientes satisfechos",
     },
     {
-      icon: '3k+',
-      title: 'Productos',
-      description: 'Amplio catálogo de artículos de papelería y oficina'
+      icon: "4k+",
+      title: "Productos",
+      description: "Amplio catálogo de artículos de papelería y oficina",
     },
     {
-      icon: '100%',
-      title: 'Satisfacción',
-      description: 'Garantía de calidad en todos nuestros productos'
-    }
-  ]
+      icon: "100%",
+      title: "Satisfacción",
+      description: "Garantía de calidad en todos nuestros productos",
+    },
+  ];
 
   // Contact Section
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Form submitted:', formData)
-    setFormData({ name: '', email: '', phone: '', message: '' })
-  }
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
 
   // Social Section
   const socials = [
-    { name: 'Facebook', icon: Facebook, color: '#1877F2', followers: '25.4k' },
-    { name: 'Instagram', icon: Instagram, color: '#E4405F', followers: '18.2k' },
-    { name: 'Twitter', icon: Twitter, color: '#1DA1F2', followers: '12.8k' },
-    { name: 'YouTube', icon: Youtube, color: '#FF0000', followers: '8.5k' }
-  ]
+    {
+      name: "Facebook",
+      icon: Facebook,
+      color: "#1877F2",
+      followers: "3.7k",
+      Link: "https://www.facebook.com/OfficePlusNuevaRosita?locale=es_LA",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      color: "#E4405F",
+      followers: "1.2k",
+      Link: "https://www.instagram.com/officeplusnuevarosita/",
+    },
+  ];
 
   // FAQ Section
-  const [openId, setOpenId] = useState<number | null>(null)
+  const [openId, setOpenId] = useState<number | null>(null);
+
+  const tarjets = [
+    {
+      type: "banc",
+      number_card: "1234 5678 9012 3456",
+      name: "OFFICE PLUS",
+    },
+    {
+      type: "banc",
+      number_card: "1234 5678 9012 3456",
+      name: "OFFICE PLUS",
+    },
+  ];
 
   const faqs = [
     {
       id: 1,
-      question: '¿Cuál es el tiempo de entrega?',
-      answer: 'Los pedidos realizados antes de las 2:00 PM se entregan el mismo día en zonas locales. Para envíos nacionales, el tiempo de entrega es de 2-5 días hábiles.'
+      question: "¿Cuál es el tiempo de entrega?",
+      answer:
+        "Los pedidos realizados antes de las 2:00 PM se entregan el mismo día en zonas locales. Para envíos nacionales, el tiempo de entrega es de 2-5 días hábiles.",
     },
     {
       id: 2,
-      question: '¿Tienen envío gratis?',
-      answer: 'Sí, ofrecemos envío gratis en todas las compras superiores a $50. Para montos menores, el costo de envío varía según la ubicación.'
+      question: "¿Tienen envío gratis?",
+      answer:
+        "Sí, ofrecemos envío gratis en todas las compras superiores a $50. Para montos menores, el costo de envío varía según la ubicación.",
     },
     {
       id: 3,
-      question: '¿Cómo puedo realizar un pedido?',
-      answer: 'Puedes realizar tu pedido directamente en nuestro sitio web o por WhatsApp en cualquier producto. También puedes contactarnos discretamente por teléfono o email.'
+      question: "¿Cómo puedo realizar un pedido?",
+      answer:
+        "Puedes realizar tu pedido directamente en nuestro sitio web o por WhatsApp en cualquier producto. También puedes contactarnos discretamente por teléfono o email.",
     },
     {
       id: 4,
-      question: '¿Tienen tienda física?',
-      answer: 'Sí, contamos con una tienda física ubicada en 123 Calle Principal, Centro Comercial. Estamos abiertos de 8:00 AM a 6:00 PM entre lunes y viernes, y sábados de 9:00 AM a 2:00 PM.'
-    }
-  ]
+      question: "¿Tienen tienda física?",
+      answer:
+        "Sí, contamos con una tienda física ubicada en 123 Calle Principal, Centro Comercial. Estamos abiertos de 8:00 AM a 6:00 PM entre lunes y viernes, y sábados de 9:00 AM a 2:00 PM.",
+    },
+
+    {
+      id: 5,
+      question: "¿El pedido se envía automáticamente por WhatsApp?",
+      answer:
+        "Sí, al confirmar tu selección, la página genera el mensaje y lo envía por WhatsApp para una atención rápida.",
+    },
+    {
+      id: 6,
+      question: "¿Qué formas de pago aceptan?",
+      answer:
+        "Aceptamos pagos en efectivo, tarjeta de débito o crédito, y transferencias bancarias.",
+    },
+    {
+      id: 7,
+      question: "¿Mis datos están seguros?",
+      answer:
+        "Sí, garantizamos la seguridad de tus datos personales. No compartimos información con terceros sin tu consentimiento explícito.",
+    },
+  ];
 
   const toggleFAQ = (id: number) => {
-    setOpenId(openId === id ? null : id)
-  }
+    setOpenId(openId === id ? null : id);
+  };
 
   return (
     <>
@@ -93,8 +144,11 @@ function MoreInfo() {
       <section className="about">
         <div className="about-container">
           <h2>Acerca de Office Plus</h2>
-          <p className="about-subtitle">Somos tu mejor aliado para equipar la oficina, escuela o negocio con productos de calidad excepcional a precios incomparables.</p>
-          
+          <p className="about-subtitle">
+            Somos tu mejor aliado para equipar la oficina, escuela o negocio con
+            productos de calidad excepcional a precios incomparables.
+          </p>
+
           <div className="stats-grid">
             {stats.map((stat, index) => (
               <div key={index} className="stat-card">
@@ -111,7 +165,9 @@ function MoreInfo() {
       <section className="contact">
         <div className="contact-container">
           <h2>Contáctanos</h2>
-          <p className="contact-subtitle">Estamos aquí para ayudarte. No dudes en comunicarte con nosotros.</p>
+          <p className="contact-subtitle">
+            Estamos aquí para ayudarte. No dudes en comunicarte con nosotros.
+          </p>
 
           <div className="contact-content">
             <div className="contact-info">
@@ -121,8 +177,7 @@ function MoreInfo() {
                 </div>
                 <div className="info-text">
                   <h4>Teléfono</h4>
-                  <p>+1 (234) 567-8900</p>
-                  <p>+1 (234) 567-8901</p>
+                  <p>+52 (861) 614 6075</p>
                 </div>
               </div>
 
@@ -132,9 +187,10 @@ function MoreInfo() {
                 </div>
                 <div className="info-text">
                   <h4>Dirección</h4>
-                  <p>123 Calle Principal,</p>
-                  <p>Centro Comercial,</p>
-                  <p>Ciudad, País 12345</p>
+                  <p>Boulevard lopez mateo </p>
+
+                  <p>Jalisco 2125 independencia 26830</p>
+                  <p>Nueva Rosita, Coah.</p>
                 </div>
               </div>
 
@@ -144,8 +200,7 @@ function MoreInfo() {
                 </div>
                 <div className="info-text">
                   <h4>Email</h4>
-                  <p>contacto@officeplus.com</p>
-                  <p>ventas@officeplus.com</p>
+                  <p>officeplus.nuevarosita@gmail.com</p>
                 </div>
               </div>
 
@@ -155,16 +210,15 @@ function MoreInfo() {
                 </div>
                 <div className="info-text">
                   <h4>Horario</h4>
-                  <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
-                  <p>Sábados: 9:00 AM - 2:00 PM</p>
-                  <p>Domingos: Cerrado</p>
+                  <p>Lunes a Sabado: 8:00 AM - 8:00 PM</p>
+                  <p>Domingo: cerrado</p>
                 </div>
               </div>
             </div>
 
             <form className="contact-form" onSubmit={handleSubmit}>
               <h3>Envíanos un Mensaje</h3>
-              
+
               <div className="form-group">
                 <label htmlFor="name">Nombre</label>
                 <input
@@ -197,7 +251,6 @@ function MoreInfo() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  placeholder="+1 234 567 8900"
                   value={formData.phone}
                   onChange={handleChange}
                   required
@@ -217,7 +270,9 @@ function MoreInfo() {
                 ></textarea>
               </div>
 
-              <button type="submit" className="submit-btn">Enviar Mensaje</button>
+              <button type="submit" className="submit-btn">
+                Enviar Mensaje
+              </button>
             </form>
           </div>
         </div>
@@ -227,22 +282,44 @@ function MoreInfo() {
       <section className="social">
         <div className="social-container">
           <h2>Síguenos en Redes Sociales</h2>
-          <p className="social-subtitle">Mantente al día con nuestras últimas ofertas, productos y novedades</p>
+          <p className="social-subtitle">
+            Mantente al día con nuestras últimas ofertas, productos y novedades
+          </p>
 
           <div className="social-grid">
             {socials.map((social) => {
-              const Icon = social.icon
+              const Icon = social.icon;
               return (
-                <a key={social.name} href="#" className="social-card" style={{ '--accent-color': social.color } as React.CSSProperties}>
+                <a
+                  key={social.name}
+                  href={social.Link}
+                  className="social-card"
+                  style={
+                    { "--accent-color": social.color } as React.CSSProperties
+                  }
+                >
                   <div className="social-icon">
                     <Icon size={48} />
                   </div>
                   <h3>{social.name}</h3>
                   <p>{social.followers}</p>
                 </a>
-              )
+              );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="terjetas_credits">
+        <h5>Tarjetas de Crédito</h5>
+        
+        <div className="tarjet-container">
+          {tarjets.map((tarjet, index) => (
+            <div key={index} className="tarjet-card">
+              <h3>{tarjet.name}</h3> <br />
+              <p>{tarjet.number_card}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -250,13 +327,15 @@ function MoreInfo() {
       <section className="faq">
         <div className="faq-container">
           <h2>Preguntas Frecuentes</h2>
-          <p className="faq-subtitle">Encuentra respuestas a las preguntas más comunes</p>
+          <p className="faq-subtitle">
+            Encuentra respuestas a las preguntas más comunes
+          </p>
 
           <div className="faq-list">
             {faqs.map((item) => (
               <div key={item.id} className="faq-item">
                 <button
-                  className={`faq-question ${openId === item.id ? 'active' : ''}`}
+                  className={`faq-question ${openId === item.id ? "active" : ""}`}
                   onClick={() => toggleFAQ(item.id)}
                 >
                   <span>{item.question}</span>
@@ -273,7 +352,7 @@ function MoreInfo() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default MoreInfo
+export default MoreInfo;

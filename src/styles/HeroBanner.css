@@ -84,7 +84,7 @@
 
 .hero-stats {
   display: flex;
-  gap: 40px;
+  gap: 2rem;
   font-size: 13px;
   opacity: 0.9;
 }
@@ -152,8 +152,5 @@
     flex-direction: column;
   }
 
-  .hero-stats {
-    flex-direction: column;
-    gap: 15px;
-  }
+  
 }

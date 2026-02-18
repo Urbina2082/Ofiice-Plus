@@ -1,0 +1,38 @@
+.tarjet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tarjet-card {
+  background: linear-gradient(135deg, #0052cc9c 0%, #4a3f7da3 45%, #e31c239d 100%);
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 460px;
+  padding: 40px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.tarjet-card:hover {
+  transform: translateY(-5px);
+}
+
+h5 {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    color: #0052CC;
+    margin: 22px;
+}
+
+.terjetas_credits {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 40px 0;
+}
+

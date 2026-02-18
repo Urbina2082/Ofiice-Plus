@@ -26,7 +26,7 @@ function Header() {
       <header className="header">
         <div className="header-content">
           <Link to="/" className="logo">
-            <img src="/logo.png" alt="Office Plus" />
+            <img src="/logo.webp" alt="Office Plus" />
             {/* <span>Office<br/>Plus</span> */}
           </Link>
 
