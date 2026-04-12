@@ -13,7 +13,7 @@ function MoreInfo() {
   // About Section
   const stats = [
     {
-      icon: "10+",
+      icon: "33+",
       title: "Años de Experiencia",
       description:
         "Más de una década sirviendo a miles de clientes satisfechos",
