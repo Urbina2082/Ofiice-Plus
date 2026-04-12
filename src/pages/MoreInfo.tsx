@@ -2,11 +2,11 @@ import "../styles/About.css";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import "../styles/Contact.css";
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, } from "lucide-react";
 import "../styles/Social.css";
 import { ChevronDown } from "lucide-react";
 import "../styles/FAQ.css";
-import { Link } from "react-router-dom";
+
 import "../styles/tarjet_banc.css";
 
 function MoreInfo() {
