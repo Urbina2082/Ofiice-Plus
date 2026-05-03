@@ -7,7 +7,7 @@ import Escritura from './pages/Escritura'
 import Papel from './pages/Papel'
 import Oficina from './pages/Oficina'
 import Tecnologia from './pages/Tecnologia'
-import Search from './pages/Search'
+
 import Details from './pages/Details'
 
 
@@ -26,7 +26,6 @@ function App() {
           <Route path="/oficina" element={<Oficina />} />
           <Route path="/tecnologia" element={<Tecnologia />} />
           <Route path="/details/:id" element={<Details />} />
-          <Route path="/search" element={<Search />} />
       
       
         </Routes>
