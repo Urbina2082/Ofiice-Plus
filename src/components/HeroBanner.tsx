@@ -1,47 +1,56 @@
-import { ArrowRight } from 'lucide-react'
-import '../styles/HeroBanner.css'
+import "../styles/HeroBanner.css";
 
 function HeroBanner() {
   return (
     <section className="hero-banner">
       <div className="hero-content">
+        <div className="vidrio">
+          <h3 className="liquid">Office Plus</h3>
+        </div>
         <div className="hero-badge">
-          🎉 Gran Apertura - Hasta 20% de Descuento
+          🔥 Gran Apertura - Hasta 20% de Descuento
         </div>
         <h1 className="hero-title">
-          Todo lo que necesitas<br />
+          Todo lo que necesitas
+          <br />
           para tu <span className="highlight">oficina</span>
         </h1>
         <p className="hero-description">
-          Productos de calidad, precios incomparables y envío rápido. OffcePus<br />
-          es tu mejor aliado para equipar tu espacio de trabajo.
+          Productos de calidad, precios incomparables <br /> y envío rápido. 
+          <b>Office Plus</b> es tu mejor aliado <br /> para equipar tu espacio
+          de trabajo.
         </p>
         <div className="hero-buttons">
-          <button className="btn btn-primary">
-            Comprar ahora <ArrowRight size={18} />
-          </button>
+          <a href="#ProductsHOme">
+            <button className="btn btn-primary">
+             <img className="icons-baner-white" src="/Icons/carrito-de-compras.webp" alt="" /> Comprar ahora 
+            </button>
+          </a>
           <button className="btn btn-secondary">
-            Explorar Catálogo
-          </button>
+              <img className="icons-baner-white" src="/Icons/cajas.webp" alt="" />Explorar Catálogo</button>
         </div>
         <div className="hero-stats">
           <div className="stat">
-            <span>📦</span> 3,000+<br/> Productos
+         <img className="icons-baner-white status-icons" src="/Icons/caja-negra.webp" alt="" /> <b>3,000+</b> Productos
           </div>
           <div className="stat">
-            <span>🚚</span> Envío<br/> Rápido
+            <img className="icons-baner-white status-icons" src="/Icons/camion.webp" alt="" /><b>Envío</b>  Rápido
           </div>
           <div className="stat">
-            <span>✅</span> Garantía
+            <img className="icons-baner-white status-icons" src="/Icons/escudo.webp" alt="" /> <b>Garantía</b> Total
           </div>
         </div>
       </div>
       <div className="hero-image">
         <img src="/hero-image.jpg" alt="Office supplies" />
-        <div className="discount-badge">15%<br/>Descuento</div>
+        <div className="discount-badge">
+          15%
+          <br />
+          Descuento
+        </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default HeroBanner
+export default HeroBanner;

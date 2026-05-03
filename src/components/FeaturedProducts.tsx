@@ -1,98 +1,141 @@
-import {  MessageCircle } from "lucide-react";
+/**
+ * 🚀 COMPONENTE OPTIMIZADO DE PRODUCTOS
+ *
+ * ✅ Buenas prácticas aplicadas:
+ * - Lazy loading de imágenes (mejora rendimiento inicial)
+ * - decoding="async" (no bloquea render)
+ * - fallback de imagen (evita errores visuales)
+ * - control de eventos dentro de Link (UX correcta)
+ * - evitar DOM innecesario (menos carga para el navegador)
+ *
+ * 🧠 Filosofía:
+ * Mostrar solo lo necesario, cargar solo lo visible y evitar trabajo extra al navegador.
+ */
+
 import "../styles/FeaturedProducts.css";
 import { Link } from "react-router-dom";
+import { InitialProduct } from "../components/InitialProduct";
 
-interface Product {
+import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
+
+type Product = {
   id: number;
   name: string;
   price: number;
-  image: string;
-}
-
-const products: Product[] = [
-  {
-    id: 1,
-    name: "Set de bolígrafos Premium",
-    price: 29.99,
-    image: "/product-1.jpg",
-  },
-  {
-    id: 2,
-    name: "Cuaderno Profesional A4",
-    price: 24.99,
-    image: "/product-2.jpg",
-  },
-  {
-    id: 3,
-    name: "Organizador de Escritorio",
-    price: 34.99,
-    image: "/product-3.jpg",
-  },
-  {
-    id: 4,
-    name: "Calculadora Científica",
-    price: 29.99,
-    image: "/product-4.jpg",
-  },
-  { id: 5, name: "Pack 500 Hojas A4", price: 18.99, image: "/product-5.jpg" },
-  {
-    id: 6,
-    name: "Engrapadora Heavy Duty",
-    price: 90.99,
-    image: "/product-6.jpg",
-  },
-  {
-    id: 7,
-    name: "Set Marcadores Colores",
-    price: 56.99,
-    image: "/product-7.jpg",
-  },
-  { id: 8, name: "Archivador Premium", price: 78.99, image: "/product-8.jpg" },
-  { id: 5, name: "Pack 500 Hojas A4", price: 18.99, image: "/product-5.jpg" },
-  {
-    id: 6,
-    name: "Engrapadora Heavy Duty",
-    price: 90.99,
-    image: "/product-6.jpg",
-  },
-  {
-    id: 7,
-    name: "Set Marcadores Colores",
-    price: 56.99,
-    image: "/product-7.jpg",
-  },
-  { id: 8, name: "Archivador Premium", price: 78.99, image: "/product-8.jpg" },
-];
+  product_images: {
+    image_url: string;
+  }[];
+};
 
 function FeaturedProducts() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  /**
+   * 📦 Fetch optimizado
+   * - Solo traemos lo necesario
+   * - Limitamos resultados para evitar sobrecarga
+   */
+  const getProducts = async () => {
+    const { data, error } = await supabase
+      .from("products")
+      .select(`
+        id,
+        name,
+        price,
+        product_images (
+          image_url
+        )
+      `)
+      .limit(15);
+
+    if (error) {
+      console.error("Error fetching products:", error);
+    } else {
+      setProducts(data || []);
+    }
+  };
+
+  /**
+   * 🔁 Se ejecuta UNA sola vez
+   * Evita múltiples renders innecesarios
+   */
+  useEffect(() => {
+    getProducts();
+  }, []);
+
   return (
-    <section className="featured-products">
+    <section className="featured-products" id="ProductsHome">
       <div className="section-header">
-        <h2>Productos Destacados</h2>
-        <p>Descubre nuestros productos más populares</p>
-        <a href="#" className="view-all">
-          Ver todo
-        </a>
+        <InitialProduct
+          title="Productos Destacados"
+          description="Descubre nuestros productos más populares"
+        />
       </div>
 
       <div className="products-grid">
-        {products.map((product) => (
-           <Link to={`/details/`} className="product-card" >
-            <div key={product.id} className="product-card">
-            <div className="product-image">
-              <img src={product.image} alt={product.name} />
-            </div>
-            <div className="product-info">
-              <h3>{product.name}</h3>
-              <p className="price">${product.price}</p>
-             
-                <button className="btn-whatsapp">
-                  <MessageCircle size={18} /> Consulta por WhatsApp
+        {products.map((product) => {
+          /**
+           * 🖼️ Fallback de imagen
+           * Evita errores si el producto no tiene imagen
+           */
+          const image =
+            product.product_images?.[0]?.image_url ||
+            "/Images/placeholder.webp";
+
+          return (
+            <Link
+              key={product.id}
+              to={`/details/${product.id}`}
+              className="product-card"
+            >
+              <div className="product-image">
+                <img
+                  src={image}
+                  alt={product.name}
+                  loading="lazy"       // 🚀 SOLO carga cuando aparece en pantalla
+                  decoding="async"    // 🚀 No bloquea render
+                />
+              </div>
+
+              <div className="product-info">
+                <h3>{product.name}</h3>
+                <p className="price">${product.price}</p>
+
+                <button
+                  className="btn-whatsapp"
+                  onClick={(e) => {
+                    /**
+                     * 🔘 Control de eventos
+                     * Evita conflicto entre botón y navegación del Link
+                     */
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const message = `Hola, me interesa este producto:
+Producto: ${product.name}
+Precio: $${product.price}`;
+
+                    const whatsappUrl = `https://wa.me/528611268148?text=${encodeURIComponent(
+                      message
+                    )}`;
+
+                    window.open(whatsappUrl, "_blank");
+                  }}
+                >
+                  <img
+                    className="iconswhatsapp"
+                    src="/Icons/whatsapp.webp"
+                    alt="WhatsApp"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  Consulta por WhatsApp
                 </button>
-              
-            </div>
-          </div></Link>
-        ))}
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </section>
   );

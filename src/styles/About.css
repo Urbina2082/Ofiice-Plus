@@ -1,6 +1,21 @@
 .about {
   padding: 70px 40px;
-  background: linear-gradient(135deg, #E8F0FF 0%, #FFE8E8 100%);
+
+  background-color: #311b9253;
+  background-image: /* 1. Mancha Azul Eléctrico (Izquierda Media) */
+    radial-gradient(at 10% 45%, rgba(0, 26, 255, 0.788) 0px, transparent 50%),
+    /* 2. Mancha Púrpura Vibrante (Centro) */
+    radial-gradient(at 50% 50%, hsla(271, 91%, 52%, 0.693) 0px, transparent 50%),
+    /* 3. Mancha Fucsia/Carmesí (Esquina Inferior Derecha) */
+    radial-gradient(
+        at 85% 85%,
+        hsla(339, 100%, 55%, 0.693) 0px,
+        transparent 50%
+      ),
+    /* 4. Mancha Azul Profundo (Esquina Superior Izquierda) */
+    radial-gradient(at 0% 0%, hsla(232, 100%, 35%, 0.693) 0px, transparent 50%),
+    /* 5. Destello Rosa Suave (Esquina Superior Derecha) */
+    radial-gradient(at 90% 15%, hsla(340, 80%, 65%, 0.693) 0px, transparent 50%);
   width: 100%;
 }
 
@@ -13,14 +28,14 @@
   font-size: 32px;
   font-weight: 700;
   text-align: center;
-  color: #0052CC;
+  color: #ffffff;
   margin-bottom: 12px;
 }
 
 .about-subtitle {
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #ffffff;
   margin-bottom: 45px;
   max-width: 600px;
   margin-left: auto;
@@ -34,7 +49,7 @@
 }
 
 .stat-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.328);
   border: 2px solid #ddd;
   border-radius: 12px;
   padding: 30px;
@@ -44,7 +59,7 @@
 
 .stat-card:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  border-color: #0052CC;
+  border-color: #0052cc;
 }
 
 .stat-icon {
@@ -61,28 +76,117 @@
 }
 
 .stat-card:nth-child(1) .stat-icon {
-  background-color: #5B9BEC;
+  background-color: #2472d9;
 }
 
 .stat-card:nth-child(2) .stat-icon {
-  background-color: #EC6B7B;
+  background-color: #e93b4f;
 }
 
 .stat-card:nth-child(3) .stat-icon {
-  background-color: #5B9BEC;
+  background-color: #2472d9;
 }
 
 .stat-card h3 {
   font-size: 16px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 8px;
 }
 
 .stat-card p {
   font-size: 13px;
-  color: #666;
+  color: #ffffff;
   line-height: 1.5;
+}
+
+/* ===== SECCIÓN ===== */
+.terjetas_credits {
+  padding: 60px 20px;
+  background: #f5f5f7;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* TITULO */
+.terjetas_credits h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #5f2cff, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* CONTENEDOR */
+.tarjet-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ===== TARJETA ===== */
+.tarjet-card {
+  padding: 20px;
+  border-radius: 18px;
+  background-color: #311b9253;
+  background-image: /* 1. Mancha Azul Eléctrico (Izquierda Media) */
+    radial-gradient(at 10% 45%, rgba(0, 26, 255, 0.788) 0px, transparent 50%),
+    /* 2. Mancha Púrpura Vibrante (Centro) */
+    radial-gradient(at 50% 50%, hsla(271, 91%, 52%, 0.693) 0px, transparent 50%),
+    /* 3. Mancha Fucsia/Carmesí (Esquina Inferior Derecha) */
+    radial-gradient(
+        at 85% 85%,
+        hsla(339, 100%, 55%, 0.693) 0px,
+        transparent 50%
+      ),
+    /* 4. Mancha Azul Profundo (Esquina Superior Izquierda) */
+    radial-gradient(at 0% 0%, hsla(232, 100%, 35%, 0.693) 0px, transparent 50%),
+    /* 5. Destello Rosa Suave (Esquina Superior Derecha) */
+    radial-gradient(at 90% 15%, hsla(340, 80%, 65%, 0.693) 0px, transparent 50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  width: 400px;
+  box-shadow: 0 15px 40px rgba(95, 44, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+/* EFECTO LUZ */
+.tarjet-card::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgb(253, 175, 175), transparent);
+  top: -50px;
+  right: -50px;
+  filter: blur(40px);
+}
+
+/* HOVER */
+.tarjet-card:hover {
+  transform: translateY(-6px);
+}
+
+/* NOMBRE */
+.tarjet-card h3 {
+  font-size: 1.95rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+/* NUMERO */
+.tarjet-card p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 @media (max-width: 1024px) {

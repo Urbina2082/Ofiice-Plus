@@ -1,1 +1,9 @@
+:root{
+  
+    --title_h2_White: linear-gradient(90deg, #bebfd2, #ffffff);
+    --secondary-blue: #003DA5;
+    --light-blue: #E6F0FF;
+    --primary-green: #28A745;
+    --secondary-green: #218838;
 
+}

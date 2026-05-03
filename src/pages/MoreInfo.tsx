@@ -7,7 +7,7 @@ import "../styles/Social.css";
 import { ChevronDown } from "lucide-react";
 import "../styles/FAQ.css";
 
-import "../styles/tarjet_banc.css";
+
 
 function MoreInfo() {
   // About Section
@@ -78,14 +78,10 @@ function MoreInfo() {
   const tarjets = [
     {
       type: "banc",
-      number_card: "1234 5678 9012 3456",
+      number_card: "07207200107480224",
       name: "OFFICE PLUS",
     },
-    {
-      type: "banc",
-      number_card: "1234 5678 9012 3456",
-      name: "OFFICE PLUS",
-    },
+   
   ];
 
   const faqs = [
@@ -93,19 +89,19 @@ function MoreInfo() {
       id: 1,
       question: "¿Cuál es el tiempo de entrega?",
       answer:
-        "Los pedidos realizados antes de las 2:00 PM se entregan el mismo día en zonas locales. Para envíos nacionales, el tiempo de entrega es de 2-5 días hábiles.",
+        "Los pedidos realizados antes de las 2:00 PM pueden entregarse el mismo día en zonas locales . Para envíos nacionales, el tiempo de entrega es de 1-2 días hábiles dependiendo la distancia.",
     },
     {
       id: 2,
       question: "¿Tienen envío gratis?",
       answer:
-        "Sí, ofrecemos envío gratis en todas las compras superiores a $50. Para montos menores, el costo de envío varía según la ubicación.",
+        "Sí, ofrecemos envío gratis en todas las compras superiores a $100. Para montos menores, el costo de envío varía según la ubicación.",
     },
     {
       id: 3,
       question: "¿Cómo puedo realizar un pedido?",
       answer:
-        "Puedes realizar tu pedido directamente en nuestro sitio web o por WhatsApp en cualquier producto. También puedes contactarnos discretamente por teléfono o email.",
+        "Puedes realizar tu pedido directamente en por WhatsApp en cualquier producto. También puedes contactarnos discretamente por teléfono o email.",
     },
     {
       id: 4,
@@ -124,7 +120,7 @@ function MoreInfo() {
       id: 6,
       question: "¿Qué formas de pago aceptan?",
       answer:
-        "Aceptamos pagos en efectivo, tarjeta de débito o crédito, y transferencias bancarias.",
+        "Aceptamos pagos en efectivo, tarjeta de débito y transferencias bancarias.",
     },
     {
       id: 7,
@@ -177,7 +173,7 @@ function MoreInfo() {
                 </div>
                 <div className="info-text">
                   <h4>Teléfono</h4>
-                  <p>+52 (861) 614 6075</p>
+                  <p>+52 (861) 6144979</p>
                 </div>
               </div>
 
@@ -311,7 +307,7 @@ function MoreInfo() {
       </section>
 
       <section className="terjetas_credits">
-        <h5>Tarjetas de Crédito</h5>
+        <h2>Tarjetas de Crédito</h2>
         
         <div className="tarjet-container">
           {tarjets.map((tarjet, index) => (

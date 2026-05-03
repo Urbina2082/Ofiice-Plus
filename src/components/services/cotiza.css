@@ -1,0 +1,79 @@
+
+.cotizacion {
+  display: flex;
+  align-items: center;
+ flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+  padding: 25px 30px;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    #1d4ed8,
+    #7c3aed,
+    #e11d48
+  );
+  color: white;
+  max-width: 1100px;
+  margin: 40px auto;
+ 
+  overflow: hidden;
+}
+
+.Icono-cotizacion {
+  width: 70px;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.329);
+  padding: 15px;
+  border-radius: 50%;
+  object-fit: contain;
+    filter: invert(1);
+
+}
+
+.cotizacion-mesaje span {
+  font-size: 16px;
+  opacity: 0.9;
+  
+}
+
+.cotizacion-mesaje h5 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 5px;
+}
+
+
+.cotizacion a {
+  text-decoration: none;
+}
+
+.cotizacion button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.339);
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  
+}
+
+.cotizacion button img {
+  width: 20px;
+  height: 20px;
+     filter: invert(1);
+
+
+}
+
+@media (max-width: 798px) {
+  .cotizacion {
+
+ 
+  gap: 1.7rem;}
+}

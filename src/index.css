@@ -14,9 +14,11 @@ body {
   color: #1a1a1a;
   background-color: #fff;
   margin: 0;
+  scroll-behavior: smooth;
   padding: 0;
 }
 
 main {
   width: 100%;
+  
 }

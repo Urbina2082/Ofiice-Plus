@@ -87,7 +87,5 @@
     padding: 40px 20px;
   }
 
-  .brands-grid {
-    grid-template-columns: 1fr;
-  }
+ 
 }

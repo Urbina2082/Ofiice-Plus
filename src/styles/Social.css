@@ -1,6 +1,19 @@
 .social {
   padding: 70px 40px;
-  background: linear-gradient(135deg, #FFE8E8 0%, #E8F0FF 100%);
+  background-color: #311b9253; /* Color base morado oscuro */
+  background-image:
+        /* 1. Mancha Azul Eléctrico (Izquierda Media) */
+    radial-gradient(at 10% 45%, rgba(0, 26, 255, 0.788) 0px, transparent 50%),
+    /* 2. Mancha Púrpura Vibrante (Centro) */
+    radial-gradient(at 50% 50%, hsla(271, 91%, 52%, 0.693) 0px, transparent 50%),
+    /* 3. Mancha Fucsia/Carmesí (Esquina Inferior Derecha) */
+    radial-gradient(at 85% 85%, hsla(339, 100%, 55%, 0.693) 0px, transparent 50%),
+    /* 4. Mancha Azul Profundo (Esquina Superior Izquierda) */
+    radial-gradient(at 0% 0%, hsla(232, 100%, 35%, 0.693) 0px, transparent 50%),
+    /* 5. Destello Rosa Suave (Esquina Superior Derecha) */
+    radial-gradient(at 90% 15%, hsla(340, 80%, 65%, 0.693) 0px, transparent 50%);
+
+  /* Para asegurar que el fondo se vea bien en cualquier tamaño */  color: white;
   width: 100%;
 }
 
@@ -13,14 +26,14 @@
   font-size: 32px;
   font-weight: 700;
   text-align: center;
-  color: #0052CC;
+  color: #ffffff !important;
   margin-bottom: 12px;
 }
 
 .social-subtitle {
   text-align: center;
   font-size: 14px;
-  color: #666;
+  color: #ffffff !important;
   margin-bottom: 45px;
 }
 
@@ -31,7 +44,7 @@
 }
 
 .social-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.386);
   border: 2px solid #ddd;
   border-radius: 12px;
   padding: 30px;
@@ -65,13 +78,13 @@
 .social-card h3 {
   font-size: 16px;
   font-weight: 700;
-  color: #1a1a1a;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
 .social-card p {
   font-size: 12px;
-  color: #666;
+  color: #ffffff !important;
 }
 
 @media (max-width: 1024px) {

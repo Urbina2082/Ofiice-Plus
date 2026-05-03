@@ -1,12 +1,18 @@
 import HeroBanner from '../components/HeroBanner'
 import FeaturedProducts from '../components/FeaturedProducts'
 import Brands from '../components/Brands'
+import InfoHome  from '../components/Infohome'
+
+import Services from '../Sections/Home-sections/Services'
 
 function Home() {
   return (
     <>
       <HeroBanner />
+      <InfoHome />
       <FeaturedProducts />
+   
+      <Services />
       <Brands />
     </>
   )

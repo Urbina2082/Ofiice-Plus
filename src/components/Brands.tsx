@@ -33,7 +33,7 @@ function Brands() {
         {brands.map(brand => (
           <div key={brand.name} className="brand-card">
             <img src={brand.image} alt={brand.name} />
-            <h3>{brand.name}</h3>
+            {/* <h3>{brand.name}</h3> */}
           </div>
         ))}
       </div>

@@ -1,13 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Footer from './components/Footer'
+import Footer from './Sections/Footer'
 import Home from './pages/Home'
 import MoreInfo from './pages/MoreInfo'
 import Escritura from './pages/Escritura'
 import Papel from './pages/Papel'
 import Oficina from './pages/Oficina'
 import Tecnologia from './pages/Tecnologia'
-import Details from './pages/DetailsProducts'
+import Search from './pages/Search'
+import Details from './pages/Details'
+
+
 import './App.css'
 
 function App() {
@@ -22,7 +25,10 @@ function App() {
           <Route path="/papel" element={<Papel />} />
           <Route path="/oficina" element={<Oficina />} />
           <Route path="/tecnologia" element={<Tecnologia />} />
-          <Route path="/details/:productId" element={<Details />} />
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/search" element={<Search />} />
+      
+      
         </Routes>
       </main>
       <Footer />

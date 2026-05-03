@@ -1,0 +1,87 @@
+.Servicios {
+  text-align: left;
+  padding: 40px;
+  text-align: center;
+  margin: 3rem 0rem e;
+}
+
+.Servicios h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: black;
+}
+
+.Servicios h2 span {
+  font-weight: 700;
+  background: linear-gradient(90deg, #5f2cff, #ff2c9c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Servicios p {
+  margin: 16px auto 3rem;
+  font-size: 18px;
+  color: #6b7280;
+  max-width: 600px;
+}
+
+/* renderCards */
+
+.Servicios .rendercards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+/* Extras point */
+
+.extras-point {
+  display: inline-flex;
+  
+  gap: 0;
+  background: #f9fafb;
+  border-radius: 20px;
+  padding: 30px 40px;
+  border: 1px solid #e5e7eb;
+  max-width: 1100px;
+  margin: 6rem auto 4rem;
+  position: relative;
+}
+
+/* Línea  */
+.extras-point::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 50%;
+  width: 1px;
+  background: #e5e7eb;
+}
+
+/* description  */
+
+.Servicios .description {
+  color: #0000009a;
+  background: #6b728000;
+  border: none;
+  display: block;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .Servicios {
+    padding: 40px 10px;
+  }
+
+  .extras-point {
+     flex-wrap: wrap;
+     gap: 2rem;
+  padding: 30px 10px;
+  }
+  .extras-point::after {
+  width: 0px;
+ 
+}
+}

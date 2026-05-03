@@ -126,6 +126,7 @@
   display: flex;
   gap: 35px;
   margin-left: auto;
+  flex-wrap: wrap;
 }
 
 .nav-item {
@@ -149,10 +150,10 @@
 }
 
 .nav-item.mas-info-btn {
-  background-color: var(--accent-red);
+  background: linear-gradient(135deg, #ff1744 0%, #d50000 100%);
   color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
+  padding: 8px 20px;
+  border-radius: 24px;
   transition: background-color 0.3s;
 }
 
@@ -174,7 +175,14 @@
     width: 100%;
     margin-left: 0;
     gap: 15px;
+    align-items: center;
+    justify-content: center;
   }
+
+  .nav-item.mas-info-btn {
+  padding: 8px 56px;
+
+}
 
   .search-bar {
     flex: 1;
@@ -185,4 +193,9 @@
     gap: 0.5rem;
     margin: .5rem 0rem;
   }
+
+.top-bar{
+  display: none;
+}
+
 }
