@@ -82,6 +82,7 @@
 
 .list-item::before {
   content: "✔";
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
