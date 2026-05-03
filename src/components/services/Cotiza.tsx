@@ -1,5 +1,5 @@
 import "./cotiza.css"
-import {  Phone } from "lucide-react";
+
 
 type CotizacionProps = {
   icon: string;
