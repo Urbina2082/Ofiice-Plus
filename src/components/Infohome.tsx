@@ -1,4 +1,4 @@
-import "../styles/infohome.css"
+import "./Infohome.css"
 
 const InfoHome = () => {
   return (
