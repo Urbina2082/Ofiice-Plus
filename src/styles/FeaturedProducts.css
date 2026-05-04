@@ -1,16 +1,8 @@
-/* 
-🚀 CSS OPTIMIZADO PARA RENDIMIENTO
 
-🧠 PRINCIPIOS CLAVE:
-- Evitar propiedades costosas (blur, filter)
-- Usar transform (GPU acelerado)
-- Evitar transition: all
-- Reducir sombras pesadas
-*/
 
 .featured-products {
   padding: 80px 20px;
-  background: #f5f5f7;
+  
 }
 
 .section-header {
@@ -35,13 +27,13 @@
   /* 🔥 Sin blur (ANTES era el problema principal) */
   background: rgba(255, 255, 255, 0.9);
 
-  border: 1px solid rgba(0, 0, 0, 0.295);
+  border: 1px solid rgba(0, 0, 0, 0.423);
 
   /* 🔥 SOLO animar transform (rendimiento) */
   transition: transform 0.25s ease;
 
   /* 🔥 sombra ligera */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.121);
+  box-shadow:3px 3px 10px 2px rgba(0, 0, 0, 0.205);
 
   text-decoration: none;
   height: 100%;
