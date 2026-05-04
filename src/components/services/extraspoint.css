@@ -8,7 +8,7 @@
   height: 60px;
   margin: auto;
   border-radius: 50%; 
-  background-color: #311b92; /* Color base morado oscuro */
+ background-color: #311b92cc; /* Color base morado oscuro */
   background-image:
         /* 1. Mancha Azul Eléctrico (Izquierda Media) */
     radial-gradient(at 10% 45%, hsla(234, 100%, 50%, 1) 0px, transparent 50%),
@@ -57,7 +57,7 @@
   color: #fff;
   font-weight: 500;
 
- background-color: #311b92; /* Color base morado oscuro */
+ background-color: #311b92d4; /* Color base morado oscuro */
   background-image:
         /* 1. Mancha Azul Eléctrico (Izquierda Media) */
     radial-gradient(at 10% 45%, hsla(234, 100%, 50%, 1) 0px, transparent 50%),
@@ -108,7 +108,7 @@
   height: 22px;
   border-radius: 50%;
 
-background-color: #311b92; /* Color base morado oscuro */
+ background-color: #311b92d3; /* Color base morado oscuro */
   background-image:
         /* 1. Mancha Azul Eléctrico (Izquierda Media) */
     radial-gradient(at 10% 45%, hsla(234, 100%, 50%, 1) 0px, transparent 50%),
