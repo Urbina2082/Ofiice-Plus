@@ -1,0 +1,272 @@
+/* CONTENEDOR PRINCIPAL */
+.whatsapp {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 3rem auto;
+  gap: 40px;
+  padding: 50px;
+  box-shadow: 5px 5px 10px 10px  #00000030;
+  border-radius: 25px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ================= LEFT ================= */
+.whatsapp .what-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* HEADER */
+.whatsapp .what-info .what-info-archivos {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+
+}
+.whatsapp .what-info .what-info-archivos .what-info-icon img{
+  width: 60px;
+  filter: invert(1);
+}
+
+
+.whatsapp .what-info .what-info-archivos .what-info-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+  background-color: #311b92; /* Color base morado oscuro */
+  background-image:
+        /* 1. Mancha Azul Eléctrico (Izquierda Media) */
+    radial-gradient(at 10% 45%, hsla(234, 100%, 50%, 1) 0px, transparent 50%),
+    /* 2. Mancha Púrpura Vibrante (Centro) */
+    radial-gradient(at 50% 50%, hsla(271, 91%, 52%, 1) 0px, transparent 50%),
+    /* 3. Mancha Fucsia/Carmesí (Esquina Inferior Derecha) */
+    radial-gradient(at 85% 85%, hsla(339, 100%, 55%, 1) 0px, transparent 50%),
+    /* 4. Mancha Azul Profundo (Esquina Superior Izquierda) */
+    radial-gradient(at 0% 0%, hsla(232, 100%, 35%, 1) 0px, transparent 50%),
+    /* 5. Destello Rosa Suave (Esquina Superior Derecha) */
+    radial-gradient(at 90% 15%, hsla(340, 80%, 65%, 0.8) 0px, transparent 50%);
+
+  /* Para asegurar que el fondo se vea bien en cualquier tamaño */
+}
+
+/* TEXTOS */
+.whatsapp .what-info .what-info-archivos .what-info-text h1 {
+  font-size: 42px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #1a0958;
+}
+
+.whatsapp .what-info .what-info-archivos .what-info-text h1 span {
+  background: linear-gradient(90deg, #4a00e0, #ff3c3c);
+  -webkit-background-clip: text;
+  font-size: 62px;
+  -webkit-text-fill-color: transparent;
+}
+
+.whatsapp .what-info .what-info-archivos .what-info-text h1 .impresion {
+  background: linear-gradient(90deg, #ff3c3c, #ff0000);
+  -webkit-background-clip: text;
+  font-size: 42px;
+  -webkit-text-fill-color: transparent;
+}
+
+.whatsapp .what-info .what-info-archivos .what-info-text p {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 17px;
+  max-width: 500px;
+}
+
+.whatsapp .what-info .what-info-archivos .what-info-text p strong{
+ 
+  color: #073fb0;
+  
+}
+
+
+/* ================= BOX FORMATS ================= */
+.whatsapp .what-info .what-info-format {
+  display: flex;
+  gap: 25px;
+flex-wrap: wrap;
+  padding: 20px;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.237);
+}
+
+/* ALERT */
+.whatsapp .what-info .what-info-format .alert {
+      max-width: 400px;
+
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 19px;
+  color: #444;
+}
+
+.whatsapp .what-info .what-info-format .alert span {
+  color: #e11d48;
+  font-weight: 600;
+}
+
+/* ICONS */
+.whatsapp .what-info .what-info-format .formats-icons {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.whatsapp .what-info .what-info-format .formats-icons .icons-format-format {
+  display: flex;
+  gap: 10px;
+}
+
+.whatsapp .what-info .what-info-format .formats-icons .icons-format-format img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* TAGS */
+.whatsapp .what-info .what-info-format .formats-icons .formats p {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 5px;
+}
+
+.whatsapp .what-info .what-info-format .formats-icons .formats .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.whatsapp .what-info .what-info-format .formats-icons .formats .tags span {
+  background: #f1f5f9;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ================= RIGHT ================= */
+.whatsapp .what-contact {
+  display: flex;
+  align-items: center;
+}
+
+/* CARD */
+.whatsapp .what-contact .whatsapp-card {
+
+  background-color: #311b92; /* Color base morado oscuro */
+  background-image:
+        /* 1. Mancha Azul Eléctrico (Izquierda Media) */
+    radial-gradient(at 10% 45%, hsla(234, 100%, 50%, 1) 0px, transparent 50%),
+    /* 2. Mancha Púrpura Vibrante (Centro) */
+    radial-gradient(at 50% 50%, hsla(271, 91%, 52%, 1) 0px, transparent 50%),
+    /* 3. Mancha Fucsia/Carmesí (Esquina Inferior Derecha) */
+    radial-gradient(at 85% 85%, hsla(339, 100%, 55%, 1) 0px, transparent 50%),
+    /* 4. Mancha Azul Profundo (Esquina Superior Izquierda) */
+    radial-gradient(at 0% 0%, hsla(232, 100%, 35%, 1) 0px, transparent 50%),
+    /* 5. Destello Rosa Suave (Esquina Superior Derecha) */
+    radial-gradient(at 90% 15%, hsla(340, 80%, 65%, 0.8) 0px, transparent 50%);
+
+  /* Para asegurar que el fondo se vea bien en cualquier tamaño */  
+  padding: 40px 20px; 
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+  max-width: 320px;
+  position: relative;
+}
+
+
+/* TEXT */
+.whatsapp .what-contact .whatsapp-card h3 {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* BOTON */
+.whatsapp .what-contact .whatsapp-card .whatsapp-btn {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #25d366, #1ebe57);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  
+}
+.whatsapp-btn img{
+  width: 24px;
+}
+
+.whatsapp .what-contact .whatsapp-card .whatsapp-btn:hover {
+  transform: scale(1.05);
+}
+
+
+.what-icon img{
+  width: 70px;
+
+}
+
+@media (max-width: 768px) {
+.whatsapp {
+   justify-content: center;
+    padding: 20px;
+    margin: 7rem 0rem;
+      box-shadow: 5px 5px 10px 10px  #00000000;
+
+}
+  .whatsapp .what-info .what-info-archivos {
+  flex-direction: column;
+  justify-content: center;
+
+  }
+
+  .whatsapp .what-info .what-info-archivos .what-info-text h1 {
+    font-size: 32px;
+    
+}
+.whatsapp .what-info .what-info-archivos .what-info-text h1 span {
+   
+    font-size: 52px;
+    
+}
+.whatsapp .what-info .what-info-archivos .what-info-text h1 .impresion {
+ 
+    font-size: 38px;
+    
+}
+
+.whatsapp .what-info .what-info-format {
+
+      text-align: center;
+
+  
+}
+
+.whatsapp .what-info .what-info-format .formats-icons {
+  margin: auto;
+}
+
+
+}

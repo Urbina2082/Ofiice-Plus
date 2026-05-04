@@ -40,7 +40,7 @@
   display: inline-flex;
   
   gap: 0;
-  background: #f9fafb;
+  box-shadow:5px 5px 10px 10px #00000023;
   border-radius: 20px;
   padding: 30px 40px;
   border: 1px solid #e5e7eb;

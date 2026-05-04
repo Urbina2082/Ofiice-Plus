@@ -7,12 +7,21 @@
   gap: 4rem;
   padding: 25px 30px;
   border-radius: 20px;
-  background: linear-gradient(
-    90deg,
-    #1d4ed8,
-    #7c3aed,
-    #e11d48
-  );
+ background-color: #311b92; /* Color base morado oscuro */
+  background-image:
+        /* 1. Mancha Azul Eléctrico (Izquierda Media) */
+    radial-gradient(at 10% 45%, hsla(234, 100%, 50%, 1) 0px, transparent 50%),
+    /* 2. Mancha Púrpura Vibrante (Centro) */
+    radial-gradient(at 50% 50%, hsla(271, 91%, 52%, 1) 0px, transparent 50%),
+    /* 3. Mancha Fucsia/Carmesí (Esquina Inferior Derecha) */
+    radial-gradient(at 85% 85%, hsla(339, 100%, 55%, 1) 0px, transparent 50%),
+    /* 4. Mancha Azul Profundo (Esquina Superior Izquierda) */
+    radial-gradient(at 0% 0%, hsla(232, 100%, 35%, 1) 0px, transparent 50%),
+    /* 5. Destello Rosa Suave (Esquina Superior Derecha) */
+    radial-gradient(at 90% 15%, hsla(340, 80%, 65%, 0.8) 0px, transparent 50%);
+
+  /* Para asegurar que el fondo se vea bien en cualquier tamaño */  
+ 
   color: white;
   max-width: 1100px;
   margin: 40px auto;

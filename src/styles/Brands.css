@@ -11,8 +11,21 @@
 
 .badge {
   display: inline-block;
-   background: linear-gradient(135deg, #0052cc50 0%, #4a3f7d4f 45%, #e31c2362 100%);
-  color: var(--primary-blue);
+background-color: #311b929a; /* Color base morado oscuro */
+  background-image:
+        /* 1. Mancha Azul Eléctrico (Izquierda Media) */
+    radial-gradient(at 10% 45%, rgba(0, 26, 255, 0.426) 0px, transparent 50%),
+    /* 2. Mancha Púrpura Vibrante (Centro) */
+    radial-gradient(at 50% 50%, rgba(136, 21, 244, 0.475) 0px, transparent 50%),
+    /* 3. Mancha Fucsia/Carmesí (Esquina Inferior Derecha) */
+    radial-gradient(at 85% 85%, rgba(255, 26, 106, 0.835) 0px, transparent 50%),
+    /* 4. Mancha Azul Profundo (Esquina Superior Izquierda) */
+    radial-gradient(at 0% 0%, rgba(0, 24, 179, 0.52) 0px, transparent 50%),
+    /* 5. Destello Rosa Suave (Esquina Superior Derecha) */
+    radial-gradient(at 90% 15%, hsla(340, 80%, 65%, 0.8) 0px, transparent 50%);
+
+  /* Para asegurar que el fondo se vea bien en cualquier tamaño */  
+   color: #fff;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 11px;
